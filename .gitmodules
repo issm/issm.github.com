@@ -1,0 +1,3 @@
+[submodule "slide/slidegeso-sample"]
+	path = slide/slidegeso-sample
+	url = git@github.com:issm/SliDegeso.git
