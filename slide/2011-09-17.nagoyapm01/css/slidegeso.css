@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 100%;
+}
+
+
+body {
+    position: relative;
+    color: #333;
+    background: #fffe5e;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+
+
+#gesogeso {
+    /* position: relative; */
+}
+
+
+#gesogeso .geso {
+    position: absolute;
+    -webkit-transform-origin: center center;
+    -webkit-animation-duration: 0.6s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 0;
+}
+
+#gesogeso .geso-s {
+    width: 1440px;
+    height: 1440px;
+}
+
+#gesogeso .geso-m {
+    width: 1920px;
+    height: 1920px;
+}
+
+
+#gesogeso-geso-1 {
+    z-index: 100001;
+    background-position: left top;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(0deg);
+    -webkit-animation-name: 'gesogeso-geso-1-anim';
+}
+
+#gesogeso-geso-2 {
+    z-index: 100002;
+    background-position: right center;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(0deg);
+    -webkit-animation-name: 'gesogeso-geso-2-anim';
+}
+
+#gesogeso-geso-3 {
+    z-index: 100003;
+    background-position: center top;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(0deg);
+    -webkit-animation-name: 'gesogeso-geso-3-anim';
+}
+
+
+#gesogeso-geso-1.geso-s {
+    left: -840px; /* - (720 + 160 * 3/4) */
+    background-image: url(../img/geso_wiped_1s.png);
+}
+#gesogeso-geso-2.geso-s {
+    right: -840px; /* - (720 + 160 * 3/4) */
+    background-image: url(../img/geso_wiped_2s.png);
+}
+#gesogeso-geso-3.geso-s {
+    top: -840px; /* - (720 + 160 * 3/4) */
+    background-image: url(../img/geso_wiped_3s.png);
+}
+
+#gesogeso-geso-1.geso-m {
+    left: -1120px; /* - (960 + 160) */
+    background-image: url(../img/geso_wiped_1m.png);
+}
+#gesogeso-geso-2.geso-m {
+    right: -1120px; /* - (960 + 160) */
+    background-image: url(../img/geso_wiped_2m.png);
+}
+#gesogeso-geso-3.geso-m {
+    top: -1120px; /* - (960 + 160) */
+    background-image: url(../img/geso_wiped_3m.png);
+}
+
+
+@-webkit-keyframes 'gesogeso-geso-1-anim' {
+      0% { -webkit-transform: rotate(  0deg); }
+     40% { -webkit-transform: rotate(-90deg); }
+    100% { -webkit-transform: rotate(-90deg); }
+}
+
+@-webkit-keyframes 'gesogeso-geso-2-anim' {
+      0% { -webkit-transform: rotate(   0deg); }
+     55% { -webkit-transform: rotate( -90deg); }
+    100% { -webkit-transform: rotate( -90deg); }
+}
+
+@-webkit-keyframes 'gesogeso-geso-3-anim' {
+      0% { -webkit-transform: rotate(   0deg); }
+     86% { -webkit-transform: rotate(-180deg); }
+    100% { -webkit-transform: rotate(-180deg); }
+}
+
+
+
+
+#geso-wiped {
+    position: absolute;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    background: #fff;
+    display: none;
+}
+
+
+
+#geso-help {
+    display: none;
+}
+#geso-help pre {
+    font-size: 28px;
+}
+
+
+
+
+
+article {
+    font-family: sans-serif;
+    font-size: 32px;
+    position: absolute;
+    width: 100%;
+}
+
+
+
+header,
+section,
+footer {
+    margin: 10px;
+    border: 10px solid #4de5ff;
+    border-radius: 20px;
+    position: absolute;
+    display: none;
+    height: 400px;
+    background: #fdfdfd url(../img/bg_slide.png) left top;
+}
+
+header  *,
+section *,
+footer  * {
+    line-height: 120%;
+}
+
+header  > *,
+section > *,
+footer  > * {
+    margin-right: 40px;
+    margin-left:  40px;
+}
+
+header  h1,
+section h1,
+footer  h1 {
+    margin: 0px 0 20px;
+    padding: 5px 0;
+    border-bottom: 7px solid #4de5ff;
+    border-radius: 10px 10px 0 0;
+    background: #cdf3ff;
+    text-align: center;
+    font-size: 56px;
+}
+
+header  h2,
+section h2,
+footer  h2 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+
+
+header {
+}
+
+
+section {
+}
+
+
+
+header address {
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    font-style: normal;
+    text-align: center;
+}
+
+
+a {
+    color: #333;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+pre {
+}
+
+ul,
+ol {
+    margin-left: 60px;
+}
+
+ul li,
+ol li {
+    margin-bottom: 10px;
+}
+
+li ul,
+li ol {
+    margin-top: 10px;
+}
+
+
+img {
+    padding: 8px;
+    border: 2px solid #4de5ff;
+    border-radius: 10px;
+    display: block;
+    background: #fff;
+}
+
+img.r {
+    margin: 0 10px;
+    float: right;
+}
+
+img.c {
+    margin: 0 auto;
+}
+
+
+
+
+section .navigator {
+    color: #fff;
+    text-align: right;
+
+    position: absolute;
+    right: -20px;
+    bottom: 20px;
+    width: 88px;
+    height: 44px;
+    overflow: hidden;
+    background-image: url(../img/geso_next.png);
+}
+
+section .navigator-more-item {
+    background-position: 0 0;
+}
+section .navigator-next-page {
+    background-position: 0 -44px;
+}
+
+
+
+
+section .wiper-status {
+    color: #fff;
+    text-align: right;
+
+    position: absolute;
+    left: -20px;
+    bottom: 5px;
+    width: 88px;
+    height: 75px;
+    overflow: hidden;
+    background-image: url(../img/geso_wiper_status.png);
+    background-position: 0 0;
+}
+
+section .wiper-status-enabled {
+    background-position: 0 -75px;
+}

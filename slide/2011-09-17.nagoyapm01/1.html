@@ -1,0 +1,894 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DotCloudのほんのさわり - Nagoya.pm #1 (2011-09-17)</title>
+
+  <link rel="stylesheet" type="text/css" href="css/slidegeso.css" />
+  <link rel="stylesheet" type="text/css" href="css/additional.css" />
+
+  <script type="text/javascript" src="js/jquery-1.6.3.min.js"></script>
+  <script type="text/javascript" src="js/slidegeso.js" charset="utf-8"></script>
+</head>
+<body>
+<article>
+
+
+  <header>
+    <h1>DotCloudのほんのさわり</h1>
+
+    <div style="margin-top:30px">
+      <img class="c" src="fig/1/cloud_book_01_wpublish.jpg" height="68%" />
+    </div>
+
+    <address>
+      Nagoya.pm #1 (2011-09-17)
+      <br />
+      岩田 享 / <a href="https://twitter.com/#!/issm">@issm</a>
+    </address>
+  </header>
+
+  <header>
+    <h1>DotCloudのほんのさわり</h1>
+
+    <div style="margin-top:30px">
+      <img class="c" src="fig/1/ss-1316182869.png" width="80%" />
+    </div>
+
+    <address>
+      Nagoya.pm #1 (2011-09-17)
+      <br />
+      岩田 享 / <a href="https://twitter.com/#!/issm">@issm</a>
+    </address>
+  </header>
+
+
+  <section class="show-all">
+    <h1>おまえだれよ？</h1>
+
+    <img class="r" src="fig/1/issm.jpg" width="28%" />
+
+    <ul>
+      <li>岩田 享 / @issm</li>
+      <li>LLP メガネラボ 常勤研究員</li>
+      <li>小規模なWebサイト作ったり</li>
+      <li>とある商品販売サイトのカートとか受注まわりとか</li>
+      <li>とある商品販売サイトの受注データから発注用データを生成したりとか</li>
+      <li>発注先が，生成した発注データをダウンロードするための端末をこさえたりとか</li>
+      <li><a href="http://blog.iss.ms/">http://blog.iss.ms/</a></li>
+      <li><a href="https://twitter.com/#!/issm">https://twitter.com/issm</a></li>
+    </ul>
+  </section>
+
+
+
+
+  <section class="show-all">
+    <h1>アジェンダ</h1>
+    <ul>
+      <li class="">DotCloundって？</li>
+      <li class="">インストール</li>
+      <li class="">準備</li>
+      <li class="">Hello world</li>
+      <li class="">非標準モジュールをインストールする</li>
+      <li class="">with MySQL</li>
+      <li class="">利用可能の上限</li>
+      <li class="">DotCloudコマンドいくつか</li>
+      <li class="">まとめ</li>
+    </ul>
+  </section>
+
+
+
+  <section class="show-all">
+    <h1>&nbsp;</h1>
+    <ul class="navi">
+      <li class="here">DotCloundって？</li>
+      <li             >インストール</li>
+      <li             >準備</li>
+      <li             >Hello world</li>
+      <li             >非標準モジュールをインストールする</li>
+      <li             >with MySQL</li>
+      <li             >利用可能の上限</li>
+      <li             >DotCloudコマンドいくつか</li>
+      <li             >まとめ</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>DotCloudって？</h1>
+    <ul>
+      <li>http://www.dotcloud.com/</li>
+      <li>いわゆる「PaaS」</li>
+      <li>miyagawaさんもjoin</li>
+      <li>自動でデプロイ == サーバでの作業がほとんど不要</li>
+      <li>
+        種々の言語・サービスから選択
+        <ul>
+          <li><b>Perl</b>, Python, Ruby, PHP, Node.js, ...</li>
+          <li>MySQL, PostgreSQL, MongoDB, CouchDB, ...</li>
+        </ul>
+      </li>
+    </ul>
+    <img class="c" src="fig/1/ss-1316189870.png" />
+  </section>
+
+
+
+
+  <section class="show-all">
+    <h1>&nbsp;</h1>
+    <ul class="navi">
+      <li             >DotCloundって？</li>
+      <li class="here">インストール</li>
+      <li             >準備</li>
+      <li             >Hello world</li>
+      <li             >非標準モジュールをインストールする</li>
+      <li             >with MySQL</li>
+      <li             >利用可能の上限</li>
+      <li             >DotCloudコマンドいくつか</li>
+      <li             >まとめ</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>インストール</h1>
+    <ul>
+      <li>
+        <code>dotcloud</code> コマンドで操作
+        <ul>
+          <li>Python製！</li>
+        </ul>
+      </li>
+    </ul>
+
+    <pre lang="terminal">
+      % easy_install dotcloud
+    </pre>
+
+    <ul>
+      <li>
+        <code>easy_install</code> も要インストール
+        <ul>
+          <li>ググってください</li>
+          <li>そもそも Python から（ｒｙ</li>
+        </ul>
+      </li>
+      <li>詳しくは： <a href="http://docs.dotcloud.com/firststeps/install/">http://docs.dotcloud.com/firststeps/install/</a></li>
+    </ul>
+
+  </section>
+
+
+
+  <section class="show-all">
+    <h1>&nbsp;</h1>
+    <ul class="navi">
+      <li             >DotCloundって？</li>
+      <li             >インストール</li>
+      <li class="here">準備</li>
+      <li             >Hello world</li>
+      <li             >非標準モジュールをインストールする</li>
+      <li             >with MySQL</li>
+      <li             >利用可能の上限</li>
+      <li             >DotCloudコマンドいくつか</li>
+      <li             >まとめ</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>準備</h1>
+    <p>APIキーを設定する</p>
+    <pre lang="terminal" class="font-18">
+      % dotcloud
+      Warning: /Users/issm/.dotcloud/dotcloud.conf does not exist.
+      Enter your api key (You can find it at http://www.dotcloud.com/accounts/settings):
+    </pre>
+    <p><a href="https://www.dotcloud.com/settings/">https://www.dotcloud.com/settings/</a></p>
+    <img class="c" src="fig/1/ss-1316210351.png" width="90%" />
+  </section>
+
+  <section class="show-all">
+    <h1>準備</h1>
+    <p><code>~/.dotcloud/dotcloud.conf</code></p>
+    <pre lang="text">
+{
+    "url":    "https://api.dotcloud.com/",
+    "apikey": "********"
+}
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>準備</h1>
+    <p>環境変数 <code>$DOTCLOUD_CONFIG_FILE</code></p>
+    <ul>
+      <li>設定ファイルを指定可能</li>
+      <li><code>~/.dotcloud/</code> 下が対象</li>
+    </ul>
+    <pre lang="terminal" class="font-30">
+      % DOTCLOUD_CONFIG_FILE=issm.conf dotcloud ...
+      % DOTCLOUD_CONFIG_FILE=nagoyapm.conf dotcloud ...
+    </pre>
+  </section>
+
+
+
+  <section class="show-all">
+    <h1>&nbsp;</h1>
+    <ul class="navi">
+      <li             >DotCloundって？</li>
+      <li             >インストール</li>
+      <li             >準備</li>
+      <li class="here">Hello world</li>
+      <li             >非標準モジュールをインストールする</li>
+      <li             >with MySQL</li>
+      <li             >利用可能の上限</li>
+      <li             >DotCloudコマンドいくつか</li>
+      <li             >まとめ</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>Hello world</h1>
+    <p>アプリケーションを作成する</p>
+    <pre lang="terminal">
+      % dotcloud create helloapp
+      Created application "helloapp"
+    </pre>
+  </section>
+
+
+  <section class="show-all">
+    <h1>Hello world</h1>
+    <p><code>dotcloud.yml</code> を作成する</p>
+    <pre lang="yaml">
+      www:
+          type: perl
+    </pre>
+    <ul>
+      <li><code>www</code>という名前で</li>
+      <li><code>perl</code>という「サービス」を利用する</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>Hello world</h1>
+    <p>簡単なPSGIファイル <code>app.psgi</code> を作成する</p>
+    <pre lang="perl">
+use strict;
+return sub {
+    my $env = shift;
+
+    return [
+        200,
+        [ 'Content-Type' =&gt; 'text/html; charset=utf-8' ],
+        [ << '...' ],
+<h1>Hello</h1>
+<p>Hello, DotCloud.</p>
+<p>Hello, PSGI.</p>
+...
+    ];
+};
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>Hello world</h1>
+    <p>デプロイ！</p>
+    <pre lang="terminal">
+      % cd /path/to/helloapp
+      % dotcloud push helloapp .
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>Hello world</h1>
+    <p>何か始まる</p>
+    <pre lang="terminal" class="font-14">
+% dotcloud push helloapp .
+# upload /Users/issm/projects/dotcloud/issm.dc ssh://dotcloud@uploader.dotcloud.com:443/helloapp
+# rsync
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+building file list ... done
+./
+deleting Makefile.PL
+app.psgi
+
+sent 300 bytes  received 40 bytes  61.82 bytes/sec
+total size is 246  speedup is 0.72
+Deployment for "helloapp" triggered. Will be available in a few seconds.
+2011-09-16 21:38:57 [api] Deploy helloapp scheduled for revision=latest
+2011-09-16 21:38:57 [api] Waiting for the build. (It may take a few minutes)
+2011-09-16 21:38:57 [api] All the services are ready. Beginning the build.
+2011-09-16 21:38:58 [www.0] The build started
+2011-09-16 21:38:58 [www.0] Fetched code revision rsync-1316209136.68
+2011-09-16 21:39:00 [www.0] Reloading nginx configuration: nginx.
+2011-09-16 21:39:05 [www.0] uwsgi: stopped
+2011-09-16 21:39:05 [www.0] uwsgi: started
+2011-09-16 21:39:05 [www.0] The build finished successfully
+2011-09-16 21:39:05 [api] Deploy finished
+
+Deployment finished. Your application is available at the following URLs
+www: http://helloapp-issm.dotcloud.com/
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>Hello world</h1>
+    <p><code>http://helloapp-issm.dotcloud.com/</code></p>
+    <img class="c" src="fig/1/ss-1316209265.png" />
+  </section>
+
+
+
+
+  <section class="show-all">
+    <h1>&nbsp;</h1>
+    <ul class="navi">
+      <li             >DotCloundって？</li>
+      <li             >インストール</li>
+      <li             >準備</li>
+      <li             >Hello world</li>
+      <li class="here">非標準モジュールをインストールする</li>
+      <li             >with MySQL</li>
+      <li             >利用可能の上限</li>
+      <li             >DotCloudコマンドいくつか</li>
+      <li             >まとめ</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>非標準モジュールをインストールする</h1>
+    <p><code>Makefile.PL</code> を準備する</p>
+    <pre lang="perl">
+use inc::Module::Install;
+
+name 'issm-helloapp';
+version '0.01';
+
+requires 'Text::Xslate';  # インストールするモジュール
+
+WriteAll;
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>非標準モジュールをインストールする</h1>
+    <p><code>Makefile.PL</code> を実行する</p>
+    <pre lang="terminal" class="font-22">
+% perl Makefile.PL
+include /Users/issm/projects/dotcloud/issm.dc/inc/Module/Install.pm
+include inc/Module/Install/Metadata.pm
+include inc/Module/Install/Base.pm
+include inc/Module/Install/WriteAll.pm
+include inc/Module/Install/Makefile.pm
+include inc/Module/Install/Win32.pm
+include inc/Module/Install/Can.pm
+include inc/Module/Install/Fetch.pm
+Writing Makefile for issm::helloapp
+Writing META.yml
+No license specified, setting license = 'unknown'
+    </pre>
+    <ul>
+      <li>
+        <code>inc</code> ディレクトリとかできてる
+        <ul>
+          <li>Gitで管理している場合は，<code>inc</code> も追加しておく</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>非標準モジュールをインストールする</h1>
+
+    <pre lang="terminal">
+% dotcloud push helloapp .
+    </pre>
+    <pre lang="terminal" class="font-13">
+...
+2011-09-17 01:08:26 [www.0] --&gt; Working on .
+2011-09-17 01:08:26 [www.0] Configuring /home/dotcloud/git-610f933 ... OK
+2011-09-17 01:08:26 [www.0] ==&gt; Found dependencies: Text::Xslate
+2011-09-17 01:08:27 [www.0] --&gt; Working on Text::Xslate
+2011-09-17 01:08:27 [www.0] Fetching http://search.cpan.org/CPAN/authors/id/G/GF/GFUJI/Text-Xslate-1.5002.tar.gz ... OK
+2011-09-17 01:08:28 [www.0] Configuring Text-Xslate-1.5002 ... OK
+2011-09-17 01:08:28 [www.0] ==&gt; Found dependencies: Any::Moose, Mouse, Data::MessagePack
+2011-09-17 01:08:28 [www.0] --&gt; Working on Any::Moose
+2011-09-17 01:08:28 [www.0] Fetching http://search.cpan.org/CPAN/authors/id/S/SA/SARTAK/Any-Moose-0.17.tar.gz ... OK
+2011-09-17 01:08:29 [www.0] Configuring Any-Moose-0.17 ... OK
+2011-09-17 01:08:29 [www.0] ==&gt; Found dependencies: Mouse
+2011-09-17 01:08:29 [www.0] --&gt; Working on Mouse
+2011-09-17 01:08:35 [www.0] Fetching http://search.cpan.org/CPAN/authors/id/G/GF/GFUJI/Mouse-0.93.tar.gz ... OK
+2011-09-17 01:08:36 [www.0] Configuring Mouse-0.93 ... OK
+2011-09-17 01:08:41 [www.0] Building Mouse-0.93 ... OK
+2011-09-17 01:08:41 [www.0] Successfully installed Mouse-0.93
+2011-09-17 01:08:41 [www.0] Building Any-Moose-0.17 ... OK
+2011-09-17 01:08:41 [www.0] Successfully installed Any-Moose-0.17
+2011-09-17 01:08:41 [www.0] --&gt; Working on Data::MessagePack
+2011-09-17 01:08:42 [www.0] Fetching http://search.cpan.org/CPAN/authors/id/G/GF/GFUJI/Data-MessagePack-0.36.tar.gz ... OK
+2011-09-17 01:08:42 [www.0] Configuring Data-MessagePack-0.36 ... OK
+2011-09-17 01:08:44 [www.0] Building Data-MessagePack-0.36 ... OK
+2011-09-17 01:08:44 [www.0] Successfully installed Data-MessagePack-0.36
+2011-09-17 01:08:47 [www.0] Building Text-Xslate-1.5002 ... OK
+2011-09-17 01:08:47 [www.0] Successfully installed Text-Xslate-1.5002
+...
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>非標準モジュールをインストールする</h1>
+    <p>おめでとう！ <code>Text::Xslate</code> は無事インストールされました！</p>
+  </section>
+
+
+
+  <section class="show-all">
+    <h1>&nbsp;</h1>
+    <ul class="navi">
+      <li             >DotCloundって？</li>
+      <li             >インストール</li>
+      <li             >準備</li>
+      <li             >Hello world</li>
+      <li             >非標準モジュールをインストールする</li>
+      <li class="here">with MySQL</li>
+      <li             >利用可能の上限</li>
+      <li             >DotCloudコマンドいくつか</li>
+      <li             >まとめ</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>with MySQL</h1>
+    <p><code>Makefile.PL</code> を修正する</p>
+    <pre lang="perl">
+use inc::Module::Install;
+
+name 'issm-helloapp';
+version '0.01';
+
+requires 'Text::Xslate';
+requires 'DBI';            # &lt;--
+requires 'DBD::mysql';     # &lt;--
+
+WriteAll;
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>with MySQL</h1>
+    <p><code>dotcloud.yml</code> を修正する</p>
+    <pre lang="yaml">
+www:
+    type: perl
+db:               # &lt;--
+    type: mysql   # &lt;--
+    </pre>
+    <p>ここで一度 push する</p>
+  </section>
+
+  <section class="show-all">
+    <h1>with MySQL</h1>
+    <pre lang="terminal">
+% dotcloud list
+    </pre>
+    <pre lang="terminal">
+helloapp:
+  - db  (type: mysql; instances: 1)
+  - www (type: perl; instances: 1)
+    </pre>
+    <ul>
+      <li>MySQLが「サービス」として追加された</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>with MySQL</h1>
+    <pre lang="terminal">
+% dotcloud info helloapp.db
+    </pre>
+    <pre lang="terminal" class="font-16">
+cluster: wolverine
+config:
+    mysql_password: {mysql_password}
+created_at: 1316223755.761884
+image_version: 57db01da2848 (latest)
+ports:
+-   name: ssh
+    url: ssh://mysql@helloapp-issm.dotcloud.com:{ssh_port}
+-   name: mysql
+    url: mysql://root:{mysql_password}@helloapp-issm.dotcloud.com:{mysql_port}
+state: running
+type: mysql
+    </pre>
+    <ul>
+      <li>ユーザ：     <code>root</code></li>
+      <li>パスワード： <code>{mysql_password}</code></li>
+      <li>ホスト：     <code>helloapp-issm.dotcloud.com</code></li>
+      <li>ポート：     <code>{mysql_port}</code></li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>with MySQL</h1>
+    <pre lang="perl" class="font-15">
+use strict;
+use Text::Xslate;
+use DBI;
+return sub {
+    my $env = shift;
+    my $dbh = DBI-&gt;connect(
+        'dbi:mysql:mysql:helloapp-issm.dotcloud.com:{mysql_port}',
+        'root',
+        '{mysql_password}',
+    );
+    my $sel = $dbh-&gt;selectall_arrayref('SHOW DATABASES');
+    my %vars = (
+        sel =&gt; $sel,
+    );
+    my $tx = Text::Xslate-&gt;new;
+    my $body = $tx-&gt;render_string( &lt;&lt; '    ...', \%vars );
+&lt;h1&gt;Hello&lt;/h1&gt;
+&lt;p&gt;Hello, DotCloud.&lt;/p&gt;
+&lt;h2&gt;databases&lt;/h2&gt;
+&lt;ul&gt;
+: for $sel -&gt; $i {
+  &lt;li&gt;&lt;code&gt;&lt;: $i[0] :&gt;&lt;/code&gt;&lt;/li&gt;
+: }
+&lt;/ul&gt;
+    ...
+
+    return [
+        200,
+        [ 'Content-Type' => 'text/html; charset=utf-8' ],
+        [ $body ],
+    ];
+};
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>with MySQL</h1>
+    <img class="c" src="fig/1/ss-1316226010.png" />
+  </section>
+
+  <section class="show-all">
+    <h1>with MySQL</h1>
+    <p>注意！</p>
+    <ul>
+      <li>本来は，非 <code>root</code> なユーザを作って，そのアカウントで接続すべき</li>
+      <li><a href="http://docs.dotcloud.com/firststeps/in-depth/">http://docs.dotcloud.com/firststeps/in-depth/</a></li>
+    </ul>
+  </section>
+
+
+
+
+  <section class="show-all">
+    <h1>&nbsp;</h1>
+    <ul class="navi">
+      <li             >DotCloundって？</li>
+      <li             >インストール</li>
+      <li             >準備</li>
+      <li             >Hello world</li>
+      <li             >非標準モジュールをインストールする</li>
+      <li             >with MySQL</li>
+      <li class="here">利用可能の上限</li>
+      <li             >DotCloudコマンドいくつか</li>
+      <li             >まとめ</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>利用可能の上限</h1>
+
+    <div style="margin-bottom:20px">
+      <img src="fig/1/ss-1316212069.png" width="90%" />
+    </div>
+
+    <ul>
+      <li>無料アカウントでは2「サービス」まで使用可能</li>
+      <li>$99/月で4サービス</li>
+      <li>and more</li>
+      <li><a href="https://www.dotcloud.com/pricing/">https://www.dotcloud.com/pricing/</a></li>
+    </ul>
+  </section>
+
+
+
+
+
+  <section class="show-all">
+    <h1>&nbsp;</h1>
+    <ul class="navi">
+      <li             >DotCloundって？</li>
+      <li             >インストール</li>
+      <li             >準備</li>
+      <li             >Hello world</li>
+      <li             >非標準モジュールをインストールする</li>
+      <li             >with MySQL</li>
+      <li             >利用可能の上限</li>
+      <li class="here">DotCloudコマンドいくつか</li>
+      <li             >まとめ</li>
+    </ul>
+  </section>
+
+
+
+  <section class="show-all">
+    <h1>DotCloudコマンドいくつか</h1>
+    <pre lang="terminal">
+% dotcloud -h
+    </pre>
+
+    <pre lang="terminal" class="font-12">
+error: usage: dotcloud [-h]
+
+                {info,status,stats,run,logs,versions,url,setup,list,rollback,alias,ssh,push,destroy,create,restart,history}
+                ...
+
+Command line tool to interact with dotcloud
+
+positional arguments:
+  {info,status,stats,run,logs,versions,url,setup,list,rollback,alias,ssh,push,destroy,create,restart,history}
+    setup               setup your api key
+    history             display the last commands you ran
+    create              create an application
+    push                push your application
+    list                list your applications
+    versions            list the versions of your application
+    run                 run a remote command
+    logs                read logs
+    alias               bind a custom domain name to a service
+    destroy             destroy your application
+    url                 display URL(s) of your application
+    info                get information about your application or service
+    status              check the status
+    stats               display the HTTP stats of your service
+    rollback            rollback your service to the previous pushed version
+    ssh                 open an SSH session
+    restart             restart your service
+
+optional arguments:
+  -h, --help            show this help message and exit
+    </pre>
+  </section>
+
+
+  <section class="show-all">
+    <h1>DotCloudコマンドいくつか</h1>
+    <p><code>create / destroy</code></p>
+    <ul>
+      <li>アプリケーションを作成 / 破棄する</li>
+    </ul>
+    <pre lang="terminal">
+% dotcloud create hogeapp
+Created application "hogeapp"
+    </pre>
+    <pre lang="terminal">
+% dotcloud destroy hogeapp
+Please confirm destruction [yn]: y
+Destroy for "hogeapp" triggered.
+    </pre>
+    <ul>
+      <li>破棄は非同期で処理される → 多少ラグがあるかも</li>
+    </ul>
+  </section>
+
+
+  <section class="show-all">
+    <h1>DotCloudコマンドいくつか</h1>
+    <p><code>list</code></p>
+    <ul>
+      <li>作成されているアプリケーションを一覧する</li>
+    </ul>
+    <pre lang="terminal">
+% dotcloud list
+    </pre>
+    <pre lang="terminal">
+helloapp:
+  - www (type: perl; instances: 1)
+    </pre>
+  </section>
+
+
+  <section class="show-all">
+    <h1>DotCloudコマンドいくつか</h1>
+    <p><code>url</code></p>
+    <ul>
+      <li>指定したアプリケーションのURLを表示する</li>
+    </ul>
+    <pre lang="terminal">
+      % dotcloud url helloapp
+    </pre>
+    <pre lang="terminal">
+      www: http://helloapp-issm.dotcloud.com/
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>DotCloudコマンドいくつか</h1>
+    <p><code>info</code></p>
+    <ul>
+      <li>指定したサービスの情報を表示する</li>
+    </ul>
+    <pre lang="terminal">
+% dotcloud info helloapp.www
+    </pre>
+    <pre lang="terminal" class="font-15">
+aliases:
+- helloapp-issm.dotcloud.com
+- dc.iss.ms
+build_revision: git-03775a1
+cluster: wolverine
+config:
+    path: /
+    plack_env: deployment
+    static: static
+    uwsgi_processes: 4
+created_at: 1316207648.519671
+image_version: 87ce0731fd95 (latest)
+ports:
+-   name: ssh
+    url: ssh://dotcloud@helloapp-issm.dotcloud.com:{ssh_port}
+-   name: http
+    url: http://helloapp-issm.dotcloud.com/
+-   name: http
+    url: http://dc.iss.ms/
+state: running
+type: perl
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>DotCloudコマンドいくつか</h1>
+    <p><code>ssh</code></p>
+    <ul>
+      <li>指定したアプリケーション・サービスのホストにSSHする</li>
+    </ul>
+    <pre lang="terminal">
+      % dotcloud ssh helloapp.www
+    </pre>
+    <pre lang="terminal" class="font-16">
+# $SHELL
+dotcloud@helloapp-default-www-0:~$ perl -v
+
+This is perl 5, version 12, subversion 3 (v5.12.3) built for x86_64-linux-thread-multi
+
+Copyright 1987-2010, Larry Wall
+
+Perl may be copied only under the terms of either the Artistic License or the
+GNU General Public License, which may be found in the Perl 5 source kit.
+
+Complete documentation for Perl, including FAQ lists, should be found on
+this system using "man perl" or "perldoc perl".  If you have access to the
+Internet, point your browser at http://www.perl.org/, the Perl Home Page.
+
+dotcloud@helloapp-default-www-0:~$ 
+    </pre>
+  </section>
+
+
+  <section class="show-all">
+    <h1>DotCloudコマンドいくつか</h1>
+    <p><code>alias</code></p>
+    <ul>
+      <li>所有しているドメインを関連付けたり解除したり</li>
+    </ul>
+    <pre lang="terminal">
+% dotcloud alias add helloapp.www dc.iss.ms
+Ok. Now please add the following DNS record:
+dc.iss.ms. IN CNAME gateway.dotcloud.com.
+    </pre>
+    <pre lang="terminal">
+% dotcloud url helloapp
+www: http://helloapp-issm.dotcloud.com/
+www: http://dc.iss.ms/
+    </pre>
+    <ul>
+      <li>
+        DNS設定が必要
+        <ul>
+          <li><code>gateway.dotcloud.com.</code> に <code>cname</code></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>DotCloudコマンドいくつか</h1>
+    <img class="c" src="fig/1/ss-1316214257.png" />
+  </section>
+
+
+  <section class="show-all">
+    <h1>DotCloudコマンドいくつか</h1>
+    <p><code>logs</code></p>
+    <ul>
+      <li>指定したサービスのログを表示する</li>
+    </ul>
+    <pre lang="terminal">
+% dotcloud logs helloapp.www
+    </pre>
+    <pre lang="terminal" class="font-14">
+#  tail -F /var/log/{supervisor,nginx}/*.log 
+==&gt; /var/log/supervisor/supervisord.log &lt;==
+...
+
+==&gt; /var/log/supervisor/uwsgi.log &lt;==
+...
+
+==&gt; /var/log/nginx/access.log &lt;==
+...
+
+==&gt; /var/log/nginx/error.log &lt;==
+...
+
+==&gt; /var/log/nginx/helloapp-default-www-0.access.log &lt;==
+...
+
+==&gt; /var/log/nginx/helloapp-default-www-0.error.log &lt;==
+...
+    </pre>
+  </section>
+
+
+
+
+  <section class="show-all">
+    <h1>&nbsp;</h1>
+    <ul class="navi">
+      <li             >DotCloundって？</li>
+      <li             >インストール</li>
+      <li             >準備</li>
+      <li             >Hello world</li>
+      <li             >非標準モジュールをインストールする</li>
+      <li             >with MySQL</li>
+      <li             >利用可能の上限</li>
+      <li             >DotCloudコマンドいくつか</li>
+      <li class="here">まとめ</li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>まとめ</h1>
+
+    <p>DotCloudについて簡単に紹介</p>
+    <ul>
+      <li>
+        言語とかデータベースとかを選択して組み合わせ
+        <ul>
+          <li>もちろんPerlも！</li>
+        </ul>
+      </li>
+      <li><code>dotcloud</code> コマンドでいろいろ操作</li>
+      <li><code>dotcloud.yml</code> で利用サービスとかを設定</li>
+      <li>独自ドメインでも運用可能</li>
+      <li>無料では2サービスまで，有料でそれ以上もあるよ</li>
+      <li><a href="https://www.dotcloud.com/">https://www.dotcloud.com/</a></li>
+    </ul>
+  </section>
+
+
+
+
+  <footer>
+    <h1>おしまい</h1>
+
+    <p>ご静聴ありがとうございました！</p>
+    <div style="margin: 10px 0;">
+      <img class="c" src="fig/1/Heart From Cloud-279799.jpeg" height="69%" />
+    </div>
+    <p class="font-20" style="text-align:right">Powered by <a href="https://github.com/issm/SliDegeso">SliDegeso</a></p>
+  </footer>
+
+
+
+  <section class="show-all">
+    <h1>Some Questions?</h1>
+  </section>
+
+</article>
+</body>
+</html>
