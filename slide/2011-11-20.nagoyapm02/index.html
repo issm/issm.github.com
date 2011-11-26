@@ -1,0 +1,582 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DeLLa.JS - LL 名古屋</title>
+
+  <link rel="stylesheet" type="text/css" href="css/slidegeso.css" />
+  <link rel="stylesheet" type="text/css" href="css/additional.css" />
+
+  <script type="text/javascript" src="js/jquery-1.7.min.js"></script>
+  <script type="text/javascript" src="js/slidegeso.js" charset="utf-8"></script>
+  <script type="text/javascript">
+SliDegeso.config = {
+    wiper_enabled: false   // デフォルトのワイパー有効状態
+};
+  </script>
+</head>
+<body>
+<article>
+
+  <section class="show-all">
+    <h1>表示テスト</h1>
+    <p>表示テスト</p>
+    <ul>
+      <li>表示テスト</li>
+      <li>表示テスト</li>
+    </ul>
+
+    <pre lang="perl">
+      use 5.12.0;
+      say 'hello';
+    </pre>
+
+    <pre lang="terminal">
+      % echo hello
+      hello
+    </pre>
+  </section>
+
+  <header>
+    <h1>
+      OSC 2011 Nagoya での展示<br />
+      または<br />
+      Amon2でWebアプリを作ってみる
+    </h1>
+    <address>
+      <code>
+        2011-11-20
+        Nagoya.pm #2 (#nagoyapm)
+        <br />
+        岩田 享 / issm
+        <br />
+        <span style="color:#888">type "?" to show help</span>
+      </code>
+    </address>
+  </header>
+
+
+  <section class="show-all">
+    <h1>おまえだれよ？</h1>
+    <img class="r" src="fig/issm.jpg" width="30%" />
+    <ul>
+      <li>岩田 享（いわた）</li>
+      <li>LLP Meganelab</li>
+      <li><code>@issm</code></li>
+      <li><a href="http://blog.iss.ms/"><code>http://blog.iss.ms/</code></a></li>
+      <li><a href="https://twitter.com/#!/issm"><code>https://twitter.com/issm</code></a></li>
+      <li><code>http://*/issm</code></li>
+    </ul>
+  </section>
+
+
+
+
+  <section class="show-all">
+    <h1>アジェンダ</h1>
+    <ul class="">
+      <li class="">展示用Webアプリ概要</li>
+      <li class="">Amon2のほんのさわり</li>
+      <li class="">展示用Webアプリの少し奥</li>
+      <li class="">まとめ</li>
+    </ul>
+  </section>
+
+
+
+  <section class="show-all">
+    <h1>アジェンダ</h1>
+    <ul class="navi">
+      <li class="here">展示用Webアプリ概要</li>
+      <li class="">Amon2のほんのさわり</li>
+      <li class="">展示用Webアプリの少し奥</li>
+      <li class="">まとめ</li>
+    </ul>
+  </section>
+
+
+  <section class="">
+    <h1>展示用Webアプリ概要</h1>
+    <h2>いきさつ</h2>
+    <ul>
+      <li>OSCで何する?</li>
+      <li>PerlでWebアプリとか</li>
+      <li>ワンライナーを投稿してみたり</li>
+      <li>TwitterでOAuth</li>
+      <li>DotCloud使ってみようか</li>
+      <li>あとMongoDBとか</li>
+      <li>開発はGitHubで</li>
+    </ul>
+  </section>
+
+
+  <section class="show-all">
+    <h2 style="position:relative;top:36%;text-align:center">
+      とりあえずできた<br />
+    </h2>
+  </section>
+  <section class="show-all">
+    <h2 style="position:relative;top:36%;text-align:center">
+      とりあえずできた<br />
+      （当日の夜）
+    </h2>
+  </section>
+
+  <section class="show-all">
+    <img class="c" src="fig/1/oneliners.png" width="96%" />
+  </section>
+
+  <section class="show-all">
+    <h2 style="position:relative;top:36%;text-align:center">
+      デモ
+    </h2>
+  </section>
+  <section>
+  </section>
+
+
+
+  <section class="show-all">
+    <h1>アジェンダ</h1>
+    <ul class="navi">
+      <li class="">展示用Webアプリ概要</li>
+      <li class="here">Amon2のほんのさわり</li>
+      <li class="">展示用Webアプリの少し奥</li>
+      <li class="">まとめ</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>Amon2とは</h2>
+    <ul>
+      <li>
+        <blockquote>
+          Amon2 is simple, readable, extensible, <b>STABLE</b>, <b>FAST</b> web application framework based on Plack.
+          <cite style="display:block;text-align:right;font-size:80%">http://search.cpan.org/~tokuhirom/Amon2-3.27/lib/Amon2.pm</cite>
+        </blockquote>
+      </li>
+      <li>「薄い」</li>
+      <li>「コンテキスト」</li>
+      <li>プラグインで簡単に拡張できる</li>
+      <li><a href="http://d.hatena.ne.jp/tokuhirom/20110713/1310510015">http://d.hatena.ne.jp/tokuhirom/20110713/1310510015</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>簡単スタートガイド</h2>
+    <p><code>% cpanm Amon2</code></p>
+    <p><code>% amon2-setup.pl myproj</code></p>
+    <p><code>% cd myproj</code></p>
+    <p><code>% plackup</code></p>
+    <p style="margin-top:2em"><code>http://localhost:5000/</code></p>
+  </section>
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>ディスパッチャ</h2>
+    <p><code>lib/myproj/Web/Dispatcher.pm</code></p>
+    <pre lang="perl">
+      any '/' => sub {
+          my ($c) = @_;
+          $c->render('index.tt');
+      };
+    </pre>
+    <p><code>$c</code> が「コンテキスト」オブジェクト</p>
+    <p><code>tmpl/index.tt</code> がテンプレート</p>
+  </section>
+
+  <section class="show-all">
+    <h1>Amon2のほんのさわり</h1>
+    <h2>ディスパッチャ</h2>
+    <p><code>lib/myproj/Web/Dispatcher.pm</code></p>
+    <pre lang="perl">
+      get '/hello' => sub {
+          my ($c) = @_;
+          $c->render('hello.tt', { username => '@issm' });
+      };
+    </pre>
+    <p><code>tmpl/hello.tt</code></p>
+    <pre lang="html">
+      <h1>Hello, Amon2!</h1>
+      <h2>username: [% username %]</h2>
+    </pre>
+  </section>
+
+  <section class="show-all">
+    <h1>Amon2のほんのさわり</h1>
+    <img class="c" src="fig/1/hello-amon2.png" width="66%" />
+  </section>
+
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>コンフィグ：ファイル</h2>
+    <p><code>config/*.pl</code></p>
+    <ul>
+      <li><code>development.pl</code></li>
+      <li><code>deployment.pl</code></li>
+      <li><code>test.pl</code></li>
+    </ul>
+    <p style="margin-top:1em">環境変数 <code>PLACK_ENV</code> の値のものが読まれる</p>
+    <ul>
+      <li><code>% PLACK_ENV=test plackup  # test.pl</code></li>
+      <li><code>% plackup  # development.pl</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>コンフィグ：アクセス</h2>
+    <p>コンテキストオブジェクトの <code>config</code> プロパティ</p>
+    <pre lang="perl">
+      # in Dispatcher
+      my $config = $c->config;
+      my $foo    = $c->config->{hello}{foo};
+    </pre>
+    <pre lang="html">
+      <!-- in template -->
+      [% c().config.hello.foo %]
+    </pre>
+  </section>
+
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>プラグイン</h2>
+    <p>いろいろ拡張できる</p>
+    <pre lang="perl">
+      # in myproj::Web.pm
+      __PACKAGE__->load_plugins(
+          'Web::CSRFDefender',           # Amon2::Plugin 以下
+          '+myproj::Plugin::FooBar',  # 任意
+      );
+    </pre>
+    <pre lang="perl">
+      # in Dispatcher
+      $c->render_json({ foo => bar });
+      $c->foobar();
+    </pre>
+  </section>
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>プラグイン</h2>
+    <p>いろいろ拡張できる</p>
+    <pre lang="perl">
+      package myproj::Plugin::FooBar;
+      use warnings;
+      use Amon2::Util;
+      sub init {
+        my ($class, $c, $conf) = @_;
+        Amon2::Util::add_method(
+          $c, 'foobar', \&_foobar,
+        );
+      }
+      sub _foobar { warn 'foobar!!' }
+      1;
+    </pre>
+  </section>
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>プラグイン</h2>
+    <pre lang="perl">
+      # in myproj::Web.pm
+      __PACKAGE__->load_plugins(
+          '+myproj::Plugin::FooBar',
+      );
+    </pre>
+    <pre lang="perl">
+      # in Dispatcher
+      $c->foobar();
+    </pre>
+    <pre lang="terminal">
+      foobar!! at lib/myproj/Plugin/FooBar.pm line 10.
+      127.0.0.1 - - [20/11/2011:12:27:26 +0900] "GET /hello HTTP/1.1" 200 132 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.51.22 (KHTML, like Gecko) Version/5.1.1 Safari/534.51.22"
+    </pre>
+  </section>
+
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>トリガ</h2>
+    <pre lang="perl">
+      # in myproj::Web
+      __PACKAGE__->add_trigger(
+        HTML_FILTER => sub { ... }
+      );
+      __PACKAGE__->add_trigger(
+        BEFORE_DISPATCH => sub { ... }
+      );
+      __PACKAGE__->add_trigger(
+        AFTER_DISPATCH => sub { ... }
+      );
+    </pre>
+    <p>未勉強＞＜</p>
+  </section>
+
+
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>コンテキスト：2つの「コンテキスト」</h2>
+    <ul>
+      <li><code>myproj</code></li>
+      <li><code>myproj::Web</code> ← <code>myproj</code> を継承</li>
+    </ul>
+    <p style="margin-top:1em">ソースを見てみると．．．</p>
+    <ul>
+      <li><code>DBI</code>プラグインは <code>myproj</code> でロードされている</li>
+      <li><code>Web::CSRFDefender</code> プラグインとかは <code>myproj::Web</code> でロードされている</li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>Amon2のほんのさわり</h1>
+    <h2>コンテキスト：個人的解釈</h2>
+    <ul>
+      <li>コンテキスト == 利用シーン</li>
+      <li>例：CLI と Web</li>
+      <li>任意のシーンで使えたい → <code>myproj</code> で</li>
+      <li>Webに特化でおｋ → <code>myproj::Web</code> で</li>
+      <li>CLIシーン向けに<code>myproj::CLI</code> とか作るのもあり<br /> → まぁ不要</li>
+    </ul>
+  </section>
+
+
+
+
+  <section class="show-all">
+    <h1>アジェンダ</h1>
+    <ul class="navi">
+      <li class="">展示用Webアプリ概要</li>
+      <li class="">Amon2のほんのさわり</li>
+      <li class="here">展示用Webアプリの少し奥</li>
+      <li class="">まとめ</li>
+    </ul>
+  </section>
+
+
+  <section class="show-all">
+    <h1>展示用Webアプリの少し奥</h1>
+    <h2>使ったモジュール</h2>
+    <ul>
+      <li><code>MongoDB</code></li>
+      <li><code>OAuth::Lite::Consumer</code></li>
+      <li><code>Data::Validator</code></li>
+      <li><code>Smart::Args</code></li>
+      <li><code>Mouse::Util::TypeConstraints</code></li>
+      <li><code>JSON</code>（<code>Web::JSON</code> プラグインを知らなかった）</li>
+    </ul>
+  </section>
+
+
+
+
+  <section class="show-all">
+    <h1>アジェンダ</h1>
+    <ul class="navi">
+      <li class="">展示用Webアプリ概要</li>
+      <li class="">Amon2のほんのさわり</li>
+      <li class="">展示用Webアプリの少し奥</li>
+      <li class="here">まとめ</li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>まとめ</h1>
+    <ul>
+      <li>Amon2簡単</li>
+    </ul>
+  </section>
+
+
+
+
+  <!-- one more thing -->
+  <section class="show-all">
+    <h2 style="position:relative;top:40%;text-align:center">
+      One More Thing...
+    </h2>
+  </section>
+
+
+
+  <section class="show-all">
+    <p style="position:relative;top:40%;text-align:center;font-size:40px">
+      ニコニコ動画観てますか？
+    </p>
+  </section>
+
+  <section class="show-all">
+    <p style="position:relative;top:40%;text-align:center;font-size:40px">
+      よく観ますよね！
+    </p>
+  </section>
+
+
+
+  <section class="show-all">
+    <h1>ニコニコ動画にて</h1>
+    <p style="position:relative;top:26%;text-align:center;font-size:40px">
+      観てると．．．
+    </p>
+  </section>
+  <section class="show-all">
+    <h1>ニコニコ動画にて</h1>
+    <img class="c" src="fig/2/nicovideo.png" width="96%" style="" />
+  </section>
+
+
+
+  <section class="show-all">
+    <p style="position:relative;top:40%;text-align:center;font-size:40px">
+      作ってみた
+    </p>
+  </section>
+
+  <section class="show-all">
+    <p style="position:relative;top:35%;text-align:center;font-size:40px;line-height:150%">
+      作りなおしてみた<br />（3年ぶり1度目）
+    </p>
+  </section>
+
+
+  <section class="show-all">
+    <img class="c" src="fig/2/ss-top.png" height="95%" />
+  </section>
+
+
+  <section class="show-all">
+    <p style="position:relative;top:35%;text-align:center;font-size:40px;line-height:150%">
+      にこぐらふ<br />
+      <a href="http://www.nicograph.jp/">http://www.nicograph.jp/</a>
+    </p>
+  </section>
+
+
+  <section class="show-all-">
+    <h1>にこぐらふの概要</h1>
+    <h2>主な機能</h2>
+    <ul>
+      <li>対象の動画IDをキューに追加</li>
+      <li>コメントを取得</li>
+      <li>文字「w」についてほげほげ</li>
+      <li>グラフ生成</li> 
+    </ul>
+    <img class="c" src="fig/2/graph.png" width="50%" />
+  </section>
+
+
+  <section class="show-all-">
+    <h1>にこぐらふの概要</h1>
+    <h2>グラフ表示ページ</h2>
+  </section>
+
+  <section class="show-all">
+    <img class="c" src="fig/2/ss-entry.png" height="95%" />
+  </section>
+
+
+  <section class="show-all">
+    <h1>にこぐらふの概要</h1>
+    <h2>だいたいの構成</h2>
+    <ul>
+      <li>nginx</li>
+      <li>MySQL + Mroonga (groonga storage engine)</li>
+      <li>
+        イベント駆動プロセス
+        <ul>
+          <li>コメント取得</li>
+          <li>計算ごにょごにょ</li>
+          <li>グラフ生成</li>
+          <li>TwitterへPOST</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="show-all">
+    <h1>にこぐらふの概要</h1>
+    <h2>だいたいの構成</h2>
+      <li>
+        Perl
+        <ul>
+          <li>Amon2</li>
+          <li>Teng</li>
+          <li>AnyEvent::Filesys::Notify</li>
+          <li>Chart::Clicker</li>
+          <li>XML::LibXML</li>
+          <li>LWP::UserAgent</li>
+          <li>OAuth::Lite</li>
+          <li>Net::Twitter::Lite</li>
+        </ul>
+      </li>
+  </section>
+
+
+  <section class="show-all">
+    <h3 style="position:relative;top:40%;text-align:center;font-size:40px">
+      デモ
+    </h3>
+  </section>
+
+
+
+  <section>
+    <h1>まとめ</h1>
+    <ul>
+      <li>3年以上ぶりに作りなおしたｗｗｗｗｗｗｗ</li>
+      <li>少しは今風になったかなｗｗｗｗｗ</li>
+    </ul>
+  </section>
+
+
+  <section class="show-all">
+    <h1>おまけ</h1>
+    <p style="position:relative;top:18%;text-align:center;font-size:40px;line-height:150%">
+      ネトラン 2008年11月号<br />
+      「ベスト・オブ・悪用厳禁ツール&サイト 2008<br />
+      サイト部門・検索カテゴリ」<br />
+      金賞
+    </p>
+  </section>
+
+  <section class="show-all">
+    <img class="c" src="fig/2/netrun.jpg" height="95%" />
+  </section>
+
+
+
+
+  <footer>
+    <h1>おしまい</h1>
+    <p>ご静聴ありがとうございました！</p>
+    <div style="margin: 10px 0;">
+      <img class="c" src="fig/1/osc2011nagoya.jpg" height="69%" />
+    </div>
+    <p class="font-20" style="text-align:right">Powered by <a href="https://github.com/issm/SliDegeso">SliDegeso</a></p>
+
+
+    <ul>
+      <li><a href="https://github.com/issm/SliDegeso">https://github.com/issm/SliDegeso</a></li>
+      <li><a href="http://blog.iss.ms/">http://blog.iss.ms/</a></li>
+      <li><a href="http://twitter.com/issm">http://twitter.com/issm</a></li>
+    </ul>
+  </footer>
+
+
+
+  <section class="show-all">
+    <h1>Q?</h1>
+  </section>
+
+
+
+
+</article>
+</body>
+</html>
