@@ -1,0 +1,107 @@
+header  *,
+section *,
+footer  * {
+}
+
+header  h1,
+section h1,
+footer  h1 {
+    font-size: 48px;
+}
+
+header  h1 {
+    line-height:166%;
+}
+
+header address {
+    line-height: 150%;
+}
+
+
+article {
+    font-size: 32px;
+}
+
+
+
+article ul.agenda {
+    margin-top: 12%;
+    font-size: 48px;
+    text-align: center;
+    list-style: none;
+}
+
+article ul.agenda li {
+    margin-bottom: 3%;
+    color: #ccc;
+}
+article ul.agenda li.here {
+    color: #333;
+    font-weight: bolder;
+}
+article ul.agenda li.default {
+    color: #333;
+}
+
+
+article pre {
+    font-size: 28px;
+}
+
+
+article pre[lang="terminal"] {
+    color: #fff;
+    background: #000;
+}
+
+article .font-32 { font-size: 32px; }
+article .font-30 { font-size: 30px; }
+article .font-28 { font-size: 28px; }
+article .font-26 { font-size: 26px; }
+article .font-24 { font-size: 24px; }
+article .font-22 { font-size: 22px; }
+article .font-20 { font-size: 20px; }
+article .font-19 { font-size: 19px; }
+article .font-18 { font-size: 18px; }
+article .font-17 { font-size: 17px; }
+article .font-16 { font-size: 16px; }
+article .font-15 { font-size: 15px; }
+article .font-14 { font-size: 14px; }
+article .font-13 { font-size: 13px; }
+article .font-12 { font-size: 12px; }
+
+
+L {
+    color: #f33;
+    font-size: 120%;
+    font-weight: bolder;
+}
+
+h1 L {
+    font-size: 100%;
+}
+
+
+img.abs-r {
+    position: absolute;
+    top: 13%;
+    right: -3%;
+}
+
+
+
+.c-1 {
+ position: relative;
+ top: 40%;
+ text-align: center;
+ line-height: 166%;
+ font-size: 48px;
+}
+
+.c-2 {
+ position: relative;
+ top: 37%;
+ text-align: center;
+ line-height: 166%;
+ font-size: 48px;
+}
